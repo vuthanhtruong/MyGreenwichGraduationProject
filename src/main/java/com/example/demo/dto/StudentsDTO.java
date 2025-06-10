@@ -8,6 +8,7 @@ public class StudentsDTO {
     private String email;
     private String misId;
     private String campusName;
+    private String majorName;
     private LocalDate createdDate;
 
     public StudentsDTO(String id, String fullName, String email, String misId,
@@ -33,4 +34,6 @@ public class StudentsDTO {
     public void setCampusName(String campusName) { this.campusName = campusName; }
     public LocalDate getCreatedDate() { return createdDate; }
     public void setCreatedDate(LocalDate createdDate) { this.createdDate = createdDate; }
+    public String getMajorName() { return majorName; }
+    public void setMajorName(String majorName) { this.majorName = majorName; }
 }

@@ -6,6 +6,7 @@ public class EmployesDTO {
     private String id;
     private String fullName;
     private String email;
+    private String majorName;
     private LocalDate createdDate;
 
     public EmployesDTO(String id, String fullName, String email, LocalDate createdDate) {
@@ -24,4 +25,6 @@ public class EmployesDTO {
     public void setEmail(String email) { this.email = email; }
     public LocalDate getCreatedDate() { return createdDate; }
     public void setCreatedDate(LocalDate createdDate) { this.createdDate = createdDate; }
+    public String getMajorName() { return majorName; }
+    public void setMajorName(String majorName) { this.majorName = majorName; }
 }
