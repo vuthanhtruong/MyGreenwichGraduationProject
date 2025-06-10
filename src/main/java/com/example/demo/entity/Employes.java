@@ -16,6 +16,11 @@ import java.time.LocalDate;
 @OnDelete(action = OnDeleteAction.CASCADE)
 public class Employes extends Persons {
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "MajorID", nullable = true)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Majors majorManagement;
+
     @Column(nullable = false, updatable = false)
     private LocalDate createdDate = LocalDate.now();
 

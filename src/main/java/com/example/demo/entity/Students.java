@@ -36,6 +36,11 @@ public class Students extends Persons{
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Campuses campus;  // Liên kết với Employee (có thể NULL)
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "MajorID", nullable = true)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Majors major;
+
     public void setPassword(String password) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         this.password = passwordEncoder.encode(password);
