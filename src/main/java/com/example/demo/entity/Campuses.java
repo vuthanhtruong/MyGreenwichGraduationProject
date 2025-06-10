@@ -17,7 +17,7 @@ public class Campuses {
     @Column(name = "OpeningDay")
     private LocalDate openingDay;
 
-    @Column(name = "Describe")
+    @Column(name = "Description") // Thay 'Describe' bằng 'Description'
     private String description;
 
     // Constructors

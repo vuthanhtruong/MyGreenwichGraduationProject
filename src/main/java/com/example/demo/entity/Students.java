@@ -27,9 +27,9 @@ public class Students extends Persons{
     private String misId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID", nullable = true)
+    @JoinColumn(name = "ID", nullable = true, insertable = false, updatable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Staffs creator;  // Liên kết với Employee (có thể NULL)
+    private Staffs creator;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CampusID", nullable = true)
